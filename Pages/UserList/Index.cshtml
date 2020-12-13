@@ -41,7 +41,8 @@
                     </tr>
                     @foreach (var item in Model.Users)
                     {
-                        <tr>
+
+                        <tr id="@item.Id">
                             <td>
                                 @Html.DisplayFor(m => item.Name)
                             </td>

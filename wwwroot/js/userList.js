@@ -26,7 +26,7 @@ function loadDataTable() {
                         </a>
                         &nbsp;
                         <a class='btn btn-danger text-white' style='cursor:pointer; width:70px;'
-                            onclick=Delete('/api/user?id='+${data})>
+                            onclick=Delete(${data})>
                             Delete
                         </a>
                         </div>`;
@@ -40,7 +40,7 @@ function loadDataTable() {
     });
 }
 
-function Delete(url) {
+function Delete(id) {
     swal({
         title: "Are you sure?",
         text: "Once deleted, you will not be able to recover",
@@ -51,11 +51,12 @@ function Delete(url) {
         if (willDelete) {
             $.ajax({
                 type: "DELETE",
-                url: url,
+                url: '/api/user?id='+id,
                 success: function (data) {
                     if (data.success) {
                         toastr.success(data.message);
                         dataTable.ajax.reload();
+                        $("#" + id).remove();
                     }
                     else {
                         toastr.error(data.message);

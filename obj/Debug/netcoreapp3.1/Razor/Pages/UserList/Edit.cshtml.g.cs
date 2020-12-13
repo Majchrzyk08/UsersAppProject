@@ -439,9 +439,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<FromTutorial.Pages.UserList.EditModel> Html { get; private set; }
-        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary<FromTutorial.Pages.UserList.EditModel> ViewData => (global::Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary<FromTutorial.Pages.UserList.EditModel>)PageContext?.ViewData;
-        public FromTutorial.Pages.UserList.EditModel Model => ViewData.Model;
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<UsersApp.Pages.UserList.EditModel> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary<UsersApp.Pages.UserList.EditModel> ViewData => (global::Microsoft.AspNetCore.Mvc.ViewFeatures.ViewDataDictionary<UsersApp.Pages.UserList.EditModel>)PageContext?.ViewData;
+        public UsersApp.Pages.UserList.EditModel Model => ViewData.Model;
     }
 }
 #pragma warning restore 1591

@@ -22,8 +22,7 @@ namespace UsersApp.Pages.UserList
         public IEnumerable<User> Users { get; set; }
         public async Task OnGet()
         {
-
-            Users = await _db.User.ToListAsync();
+            Users = await _db.User.Where(a => a.IsDeleted == false).ToListAsync();           
         }
 
         public async Task<IActionResult> OnPostDelete(int id)
@@ -33,7 +32,7 @@ namespace UsersApp.Pages.UserList
             {
                 return NotFound();
             }
-            _db.User.Remove(user);
+            user.IsDeleted = true;
             await _db.SaveChangesAsync();
 
             return RedirectToPage("Index");

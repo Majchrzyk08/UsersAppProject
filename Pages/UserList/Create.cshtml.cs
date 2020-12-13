@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using UsersApp.Model;
 
-namespace FromTutorial.Pages.UserList
+namespace UsersApp.Pages.UserList
 {
     public class CreateModel : PageModel
     {

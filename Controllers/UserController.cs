@@ -22,7 +22,7 @@ namespace FromTutorial.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            return Json(new { data = await _db.User.ToListAsync() });
+            return Json(new { data = await _db.User.Where(a => a.IsDeleted == false).ToListAsync() });
         }
 
         [HttpDelete]
@@ -33,7 +33,7 @@ namespace FromTutorial.Controllers
             {
                 return Json(new { success = false, message = "Error while Deleting" });
             }
-            _db.User.Remove(userFromDb);
+            userFromDb.IsDeleted = true;
             await _db.SaveChangesAsync();
             return Json(new { success = true, message = "Delete successful" });
         }
