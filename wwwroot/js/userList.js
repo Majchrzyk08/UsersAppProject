@@ -21,14 +21,16 @@ function loadDataTable() {
                 "data": "id",
                 "render": function (data) {
                     return `<div class="text-center">
-                        <a href="/UserList/Upsert?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
-                            Edit
-                        </a>
-                        &nbsp;
+
                         <a class='btn btn-danger text-white' style='cursor:pointer; width:70px;'
                             onclick=Delete(${data})>
                             Delete
                         </a>
+                        <a href="/UserList/Upsert?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
+                            Edit
+                        </a>
+                        &nbsp;
+                        
                         </div>`;
                 }, "width": "40%"
             }

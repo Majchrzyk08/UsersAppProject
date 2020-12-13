@@ -22,7 +22,7 @@ namespace UsersApp.Pages.UserList
         public IEnumerable<User> Users { get; set; }
         public async Task OnGet()
         {
-            Users = await _db.User.Where(a => a.IsDeleted == false).ToListAsync();           
+            Users = await _db.User.Where(a => a.IsDeleted == false).ToListAsync();
         }
 
         public async Task<IActionResult> OnPostDelete(int id)
