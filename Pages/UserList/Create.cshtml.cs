@@ -29,7 +29,6 @@ namespace UsersApp.Pages.UserList
         {
             if(ModelState.IsValid)
             {
-
                 await _db.User.AddAsync(User);
                 await _db.SaveChangesAsync();
                 return RedirectToPage("Index");

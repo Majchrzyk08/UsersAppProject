@@ -17,6 +17,7 @@ namespace UsersApp.Model
         public string Surname { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+        
 
         public string Login { get; set; }
 
